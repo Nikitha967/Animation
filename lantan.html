@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Lanterns Animation</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      background-image: linear-gradient(
+        0deg,
+        hsl(205deg 55% 42%) 0%,
+        hsl(207deg 58% 40%) 4%,
+        hsl(210deg 63% 37%) 9%,
+        hsl(213deg 69% 35%) 15%,
+        hsl(216deg 80% 32%) 21%,
+        hsl(215deg 98% 27%) 28%,
+        hsl(215deg 96% 25%) 35%,
+        hsl(214deg 94% 23%) 42%,
+        hsl(212deg 91% 20%) 49%,
+        hsl(208deg 88% 16%) 56%,
+        hsl(210deg 89% 16%) 63%,
+        hsl(213deg 91% 15%) 70%,
+        hsl(216deg 93% 15%) 76%,
+        hsl(220deg 96% 15%) 82%,
+        hsl(220deg 98% 14%) 87%,
+        hsl(218deg 97% 13%) 91%,
+        hsl(215deg 95% 13%) 95%,
+        hsl(211deg 94% 12%) 98%,
+        hsl(206deg 93% 11%) 100%
+      );
+    }
+
+    .lantern {
+      width: 50px;
+      height: 80px;
+      background: orange;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      bottom: -100px;
+      animation: float 5s infinite linear;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+    }
+
+    .lantern:nth-child(odd) {
+      background: red;
+    }
+
+    .lantern:nth-child(even) {
+      background: yellow;
+    }
+
+    .lantern:nth-child(1) {
+      left: 5%;
+      animation-duration: 6s;
+    }
+
+    .lantern:nth-child(2) {
+      left: 25%;
+      animation-duration: 7s;
+    }
+
+    .lantern:nth-child(3) {
+      left: 45%;
+      animation-duration: 5.5s;
+    }
+
+    .lantern:nth-child(4) {
+      left: 65%;
+      animation-duration: 6.5s;
+    }
+
+    .lantern:nth-child(5) {
+      left: 85%;
+      animation-duration: 6s;
+    }
+
+    .lantern:nth-child(6) {
+      left: 95%;
+      animation-duration: 7.5s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0.3;
+      }
+    }
+   
+
+  </style>
+</head>
+<body>
+
+
+
+  <div class="lantern"></div>
+  <div class="lantern"></div>
+  <div class="lantern"></div>
+  <div class="lantern"></div>
+  <div class="lantern"></div>
+  <div class="lantern"></div>
+</body>
+</html>
+
